@@ -8,13 +8,13 @@ public class anagram {
         List<String> lettersOfFirstString = new ArrayList<String>();
         List<String> lettersOfSecondString = new ArrayList<String>();
 
+        if (a.length() != b.length()){
+            throw new Exception("Strings are not anagram");
+        }
+
         for (int i = 0; i < a.length(); i++){
-            if (a.length() == b.length()){
-                lettersOfFirstString.add(Character.toString(a.charAt(i)));
-                lettersOfSecondString.add(Character.toString(b.charAt(i)));
-            } else {
-                throw new Exception("Strings are not anagram");
-            }
+            lettersOfFirstString.add(Character.toString(a.charAt(i)));
+            lettersOfSecondString.add(Character.toString(b.charAt(i)));
         }
 
          for (String letter : lettersOfFirstString){
